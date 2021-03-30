@@ -20,5 +20,5 @@
     - sudo sh LaunchCoverage.sh "/home/travis/build/vizhyk"
     after_success:
     - cd CodeCoverage
-    - export CODECOV_TOKEN="f720a65e-f3e7-48d2-afa7-193a211c9062"
+    - export CODECOV_TOKEN="9eb24e52-7b21-45c2-b2a4-3a87cf122b2c"
     - bash <(curl -s https://codecov.io/bash) -f filtered.info 
