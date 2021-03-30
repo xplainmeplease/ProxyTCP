@@ -17,7 +17,7 @@
 
     script: 
     - ls -l
-    - sudo sh LaunchCoverage.sh "/home/travis/build/vizhyk"
+    - sudo sh LaunchCoverage.sh "/home/travis/build/xplainmeplease"
     after_success:
     - cd CodeCoverage
     - export CODECOV_TOKEN="9eb24e52-7b21-45c2-b2a4-3a87cf122b2c"
