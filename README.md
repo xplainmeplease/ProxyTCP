@@ -4,6 +4,9 @@
 # ProxyTCP
 Proxy that allows to visit some HTTPS websites.
 Proxy uses 1080 m_port by default
+There're 2 available modes:
+- capturing - forward network data and save it into a `.pcap` file
+- default - simple network data forwarding
 ## Build
 
 Build project using commands below:
@@ -18,7 +21,7 @@ Move to the `bin` folder and run `proxytcp` :
 
 `cd bin/`
 
-`sudo ./proxytcp --mode capture --output ./meme.pcap --port 1080` - for capturing <br>
+`sudo ./proxytcp --mode capture --output ./meme.pcap --port 1080` - for capturing network data<br>
 `sudo ./proxytcp --mode default --port 1080`  - for default execution
 
 Then run browser with appropriate flags or edit its configuratin in settings.
