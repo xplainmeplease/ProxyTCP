@@ -24,7 +24,7 @@ Move to the `bin` folder and run `proxytcp` :
 `sudo ./proxytcp --mode capture --output ./meme.pcap --port 1080` - for capturing network data<br>
 `sudo ./proxytcp --mode default --port 1080`  - for default execution
 
-Then run browser with appropriate flags or edit its configuratin in settings.
+Then run browser with appropriate flags or edit its configuration in settings.
 
 __Chromium__
 
