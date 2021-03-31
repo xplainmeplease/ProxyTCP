@@ -7,6 +7,9 @@ Proxy uses 1080 m_port by default<br>
 There're 2 available modes:
 - capturing - forward network data and save it into a `.pcap` file
 - default - simple network data forwarding
+
+![](readme-img/usecase.png)
+
 ## Build
 
 Build project using commands below:
