@@ -3,7 +3,10 @@
 
 # ProxyTCP
 Proxy that allows to visit some HTTPS websites.
-Proxy uses 1080 m_port by default
+Proxy uses 1080 m_port by default<br>
+There're 2 available modes:
+- capturing - forward network data and save it into a `.pcap` file
+- default - simple network data forwarding
 ## Build
 
 Build project using commands below:
@@ -18,10 +21,10 @@ Move to the `bin` folder and run `proxytcp` :
 
 `cd bin/`
 
-`sudo ./proxytcp --mode capture --output ./meme.pcap --port 1080` - for capturing <br>
+`sudo ./proxytcp --mode capture --output ./meme.pcap --port 1080` - for capturing network data<br>
 `sudo ./proxytcp --mode default --port 1080`  - for default execution
 
-Then run browser with appropriate flags or edit its configuratin in settings.
+Then run browser with appropriate flags or edit its configuration in settings.
 
 __Chromium__
 
@@ -29,8 +32,8 @@ via terminal: `chromium --proxy-server="socks5://127.0.0.1:1080"  `
 
 __Firefox__
 
-via UI: `Settings->Preferences->Network Settings->Manual proxy configuration-> In Socks host: 127.0.0.1 / Port: 1080`
-
+via UI: `Settings->Preferences->Network Settings->Manual proxy configuration-> In Socks host: 127.0.0.1 / Port: 1080`<br>
+(might be buggy, haven't been tested yet) 
 ![](readme-img/output.gif)
 
 

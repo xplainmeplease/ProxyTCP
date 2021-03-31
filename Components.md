@@ -3,7 +3,16 @@
 ### Application
 Actually runs the `ConnectionManager` using `Run()`
 
-### ConnectionManager
+### CommandLineOptions
+Responsible for parsing input args:<br>
+Port: port the proxy will be listening on.<br>
+Execution mode.<br>
+- default mode: simple forward from client to server
+- capturing mode: forward from client to server + capturing netword traffic into a `.pcap` file. The last one can be opened with Wireshark<br>
+
+If execution mode is selected, option `--output` should be also specified(path to the `.pcap` file).
+
+### SocketConnectionManager
 Creates connections and listens for them using `epoll`.
 After new connection occurs, it's being handled.
 After that `ConversationPipeline` is being created from `ClientConnection`
@@ -43,11 +52,14 @@ Holds `ClientConnection`, `ServerConnection`, `ConversationFlow`, `PayloadBuffer
 `PayloadBuffer` - used for holding incomplete data (for example part of the TLS record).
 
 
-### Connection
+### SocketConnection
 `Connection` holds buffer for receiving data from socket, socket file desctiptor,
 pointer to `ConversationPipeline` for retrieving `PayloadBuffer` when it's necessary.
 
 `ClientConnection`/`ServerConnection` -  2 derived classes. They're the same as Connection, created only for semantics purposes only. Will be removed soon.
+
+### SocketCapturingConnection
+Does the same as **SocketConnection** + captures network data.
 
 ### ByteStream
 Simple wrapper of vector. Holds actually used number of bytes.
