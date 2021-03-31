@@ -32,8 +32,8 @@ via terminal: `chromium --proxy-server="socks5://127.0.0.1:1080"  `
 
 __Firefox__
 
-via UI: `Settings->Preferences->Network Settings->Manual proxy configuration-> In Socks host: 127.0.0.1 / Port: 1080`
-
+via UI: `Settings->Preferences->Network Settings->Manual proxy configuration-> In Socks host: 127.0.0.1 / Port: 1080`<br>
+(might be buggy, haven't been tested yet) 
 ![](readme-img/output.gif)
 
 
