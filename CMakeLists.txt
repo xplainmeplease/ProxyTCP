@@ -48,21 +48,21 @@ ADD_LIBRARY(SourceFiles STATIC
 add_executable(proxytcp main.cpp)
 target_link_libraries(proxytcp SourceFiles)
 
-add_subdirectory(googletest)
-include_directories(googletest/googletest/include)
+# add_subdirectory(googletest)
+# include_directories(googletest/googletest/include)
 
-add_executable(proxytcp_tests
-        Tests/UnitTests/ByteStream/ByteStreamTests.cpp
-        Tests/UnitTests/TrafficParsing/SOCKS5Parser.cpp
-        Tests/UnitTests/TrafficParsing/TLSParser.cpp
-        Tests/UnitTests/SOCKS5/SOCKS5FlowTest.cpp
-        Tests/UnitTests/ConnectionManager/ConnectionManagerTest.cpp
-        Tests/UnitTests/SOCKS5/SOCKS5FlowTest.cpp
-        Tests/UnitTests/ConversationPipeline/ConversationPipelineTest.cpp
-        Tests/UnitTests/TrafficParsing/TLSRecordParser.cpp
-        Tests/UnitTests/Connection/ConnectionTest.cpp
-        )
+# add_executable(proxytcp_tests
+#         Tests/UnitTests/ByteStream/ByteStreamTests.cpp
+#         Tests/UnitTests/TrafficParsing/SOCKS5Parser.cpp
+#         Tests/UnitTests/TrafficParsing/TLSParser.cpp
+#         Tests/UnitTests/SOCKS5/SOCKS5FlowTest.cpp
+#         Tests/UnitTests/ConnectionManager/ConnectionManagerTest.cpp
+#         Tests/UnitTests/SOCKS5/SOCKS5FlowTest.cpp
+#         Tests/UnitTests/ConversationPipeline/ConversationPipelineTest.cpp
+#         Tests/UnitTests/TrafficParsing/TLSRecordParser.cpp
+#         Tests/UnitTests/Connection/ConnectionTest.cpp
+#         )
 
-target_link_libraries(proxytcp_tests SourceFiles)
-target_link_libraries(proxytcp_tests gtest gtest_main)
+# target_link_libraries(proxytcp_tests SourceFiles)
+# target_link_libraries(proxytcp_tests gtest gtest_main)
 
